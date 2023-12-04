@@ -104,3 +104,8 @@ deploy:
   type: git
   repo: https://github.com/pengcai6/pengcai6.github.io.git
   branch: master
+# hexo-admin authentification
+admin:
+  username: 3538616223
+  password_hash: $2a$10$wI/OsgN/z06.OYUCo5lrkOGhP0UhzmnMs6JVXcivHDHyYMzDeyu2.
+  secret: pengcai6@gmail.com
