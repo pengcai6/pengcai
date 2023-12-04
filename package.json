@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "hexo": "^7.0.0",
+    "hexo-abbrlink": "^2.2.1",
     "hexo-admin": "^2.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-filter-emoji": "^2.2.2",
@@ -20,12 +21,19 @@
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-helper-live2d": "^3.1.1",
     "hexo-render-pug": "^2.1.4",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
+    "hexo-tag-aplayer": "^3.0.4",
+    "hexo-tag-dplayer": "^0.3.3",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-theme-yun": "^1.10.11"
+    "hexo-theme-yun": "^1.10.11",
+    "live2d-widget-model-hijiki": "^1.0.5",
+    "live2d-widget-model-miku": "^1.0.5",
+    "live2d-widget-model-wanko": "^1.0.5",
+    "live2d-widget-model-z16": "^1.0.5"
   }
 }
