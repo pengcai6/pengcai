@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>你也不是我的救赎</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="cai" />
+  
+  <meta name="description" content="蔡的小破站">
+<meta property="og:type" content="website">
+<meta property="og:title" content="你也不是我的救赎">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="你也不是我的救赎">
+<meta property="og:description" content="蔡的小破站">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="cai6">
+<meta property="article:tag" content="cai">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="你也不是我的救赎" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/highlight.css">
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >主页</a>
+      
+        <a class="nav-item" href="/about" title
+        
+        >关于</a>
+      
+        <a class="nav-item" href="/categories" title
+        
+        >分类</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >存档</a>
+      
+        <a class="nav-item" href="/schedule" title
+        
+        >计划</a>
+      
+        <a class="nav-item" href="/sitemap.xml" title
+        
+        >导航</a>
+      
+        <a class="nav-item" href="/404" title
+        
+        >公共</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main">
+  
+    <article id="post-线性表cpp-1" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/14/%E7%BA%BF%E6%80%A7%E8%A1%A8cpp-1/">线性表cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/14/%E7%BA%BF%E6%80%A7%E8%A1%A8cpp-1/" class="article-date">
+  <time datetime="2023-12-14T12:00:19.000Z" itemprop="datePublished">2023-12-14</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*********************************************************************</span></span><br><span class="line"><span class="comment">    程序名:</span></span><br><span class="line"><span class="comment">    版权:</span></span><br><span class="line"><span class="comment">    作者: 蔡6</span></span><br><span class="line"><span class="comment">    日期: 2023-12-14 15:15</span></span><br><span class="line"><span class="comment">    说明: cai6.love</span></span><br><span class="line"><span class="comment">*********************************************************************/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ok 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> <span class="keyword">error</span> 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> true 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> false 0</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> maxsize 20</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> elemtype;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">	elemtype date[maxsize];</span><br><span class="line">	<span class="type">int</span> length;</span><br><span class="line">&#125; SqList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">int</span> Status;<span class="comment">//Status为函数返回状态</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 初始化顺序线性表 */</span></span><br><span class="line"><span class="function">Status <span class="title">InitList</span><span class="params">(SqList *L)</span> </span>&#123;</span><br><span class="line">	L-&gt;length = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">visit</span><span class="params">(elemtype c)</span> </span>&#123; <span class="comment">//查看数据</span></span><br><span class="line">	cout &lt;&lt; c;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InstEmpty</span><span class="params">(SqList L)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (L.length == <span class="number">0</span>)</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">ClearList</span><span class="params">(SqList *L)</span> </span>&#123; <span class="comment">//需要对其进行修改则使用指针，或者引用&amp;</span></span><br><span class="line">	L-&gt;length = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">GetElen</span><span class="params">(SqList *L, <span class="type">int</span> i, elemtype *e)</span> </span>&#123; <span class="comment">//获取第i位元素，并将其赋值给e</span></span><br><span class="line">	<span class="keyword">if</span> (L-&gt;length == <span class="number">0</span> || i &lt; <span class="number">1</span> || i &gt; L-&gt;length)</span><br><span class="line">		<span class="keyword">return</span> error;</span><br><span class="line">	*e = L-&gt;date[i - <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status  <span class="title">ListInsert</span><span class="params">(SqList *L, <span class="type">int</span> i, elemtype e)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//对线性表的第i位进行插入e</span></span><br><span class="line">	<span class="keyword">if</span> (L-&gt;length == maxsize )</span><br><span class="line">		<span class="keyword">return</span> error;</span><br><span class="line">	<span class="keyword">if</span> ( i &lt; <span class="number">1</span> || i &gt; L-&gt;length + <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> error;</span><br><span class="line">	<span class="keyword">if</span> (i &lt;= L-&gt;length) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> k = L-&gt;length - <span class="number">1</span>; k &gt;= i - <span class="number">1</span>; k--)</span><br><span class="line">			L-&gt;date[k + <span class="number">1</span>] = L-&gt;date[k];</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;date[i - <span class="number">1</span>] = e;</span><br><span class="line">	L-&gt;length++;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">ListDelete</span><span class="params">(SqList *L, <span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> ( i &lt; <span class="number">1</span> || i &gt; L-&gt;length + <span class="number">1</span>)</span><br><span class="line">		<span class="keyword">return</span> error;</span><br><span class="line">	<span class="keyword">if</span> (i &lt;= L-&gt;length) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> k = L-&gt;length - <span class="number">2</span>; k &gt;= i - <span class="number">1</span>; k--)</span><br><span class="line">			L-&gt;date[k] = L-&gt;date[k + <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">	L-&gt;length--;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 初始条件：顺序线性表L已存在。操作结果：返回L中数据元素个数 */</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">ListLength</span><span class="params">(SqList L)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> L.length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">ListTraverse</span><span class="params">(SqList L)</span> </span>&#123; <span class="comment">//依次输出全部数据</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; L.length; i++) &#123;</span><br><span class="line">		cout &lt;&lt; L.date[i] &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Status i;</span><br><span class="line">	SqList L;</span><br><span class="line">	i = <span class="built_in">InitList</span>(&amp;L);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;初始化L后：L.length=%d\n&quot;</span>, L.length);</span><br><span class="line">	<span class="type">int</span> a = <span class="number">2</span>;</span><br><span class="line">	i = <span class="built_in">ListInsert</span>(&amp;L, <span class="number">1</span>, a);</span><br><span class="line">	i = <span class="built_in">ListInsert</span>(&amp;L, <span class="number">1</span>, <span class="number">5</span>);</span><br><span class="line">	i = <span class="built_in">ListTraverse</span>(L);</span><br><span class="line">	i = <span class="built_in">ListDelete</span>(&amp;L, <span class="number">2</span>);</span><br><span class="line">	i = <span class="built_in">ListTraverse</span>(L);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-今日搭建进度" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/05/%E4%BB%8A%E6%97%A5%E6%90%AD%E5%BB%BA%E8%BF%9B%E5%BA%A6/">今日搭建进度</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/05/%E4%BB%8A%E6%97%A5%E6%90%AD%E5%BB%BA%E8%BF%9B%E5%BA%A6/" class="article-date">
+  <time datetime="2023-12-05T08:23:35.000Z" itemprop="datePublished">2023-12-05</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>完成netlify拉取，利用dns进行加速，已将github库设置为private</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-在hexo中插入音乐" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/04/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90/">在hexo中插入音乐</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/04/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90/" class="article-date">
+  <time datetime="2023-12-04T10:46:00.000Z" itemprop="datePublished">2023-12-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://easyhexo.com/3-Plugins-use-and-config/3-1-hexo-tag-aplayer/">链接</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-12-4" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/04/12-4/">12/4</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/04/12-4/" class="article-date">
+  <time datetime="2023-12-04T10:20:00.000Z" itemprop="datePublished">2023-12-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="完成hexo基础搭建"><a href="#完成hexo基础搭建" class="headerlink" title="完成hexo基础搭建"></a>完成hexo基础搭建</h2><p>  <em><strong>1.全局音乐播放器搭建完毕<br>  2.living-2d搭建完毕<br>  3.本地端后台搭建完毕</strong></em></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-算法竞赛入门经典3-2" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/03/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B83-2/">算法竞赛入门经典3-2</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/03/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B83-2/" class="article-date">
+  <time datetime="2023-12-03T13:49:30.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="算法竞赛入门经典3-2"><a href="#算法竞赛入门经典3-2" class="headerlink" title="算法竞赛入门经典3-2"></a>算法竞赛入门经典3-2</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">2023-12-02 10:35 </span><br><span class="line"></span><br><span class="line">/***</span><br><span class="line"> *                    _ooOoo_</span><br><span class="line"> *                   o8888888o</span><br><span class="line"> *                   88&quot; . &quot;88</span><br><span class="line"> *                   (| -_- |)</span><br><span class="line"> *                    O\ = /O</span><br><span class="line"> *                ____/`---&#x27;\____</span><br><span class="line"> *              .   &#x27; \\| |// `.</span><br><span class="line"> *               / \\||| : |||// \</span><br><span class="line"> *             / _||||| -:- |||||- \</span><br><span class="line"> *               | | \\\ - /// | |</span><br><span class="line"> *             | \_| &#x27;&#x27;\---/&#x27;&#x27; | |</span><br><span class="line"> *              \ .-\__ `-` ___/-. /</span><br><span class="line"> *           ___`. .&#x27; /--.--\ `. . __</span><br><span class="line"> *        .&quot;&quot; &#x27;&lt; `.___\_&lt;|&gt;_/___.&#x27; &gt;&#x27;&quot;&quot;.</span><br><span class="line"> *       | | : `- \`.;`\ _ /`;.`/ - ` : | |</span><br><span class="line"> *         \ \ `-. \_ __\ /__ _/ .-` / /</span><br><span class="line"> * ======`-.____`-.___\_____/___.-`____.-&#x27;======</span><br><span class="line"> *                    `=---=&#x27;</span><br><span class="line"> *</span><br><span class="line"> * .............................................</span><br><span class="line"> *          佛祖保佑             永无BUG</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/***</span><br><span class="line"> * http://www.flvcd.com/</span><br><span class="line"> *  .--,       .--,</span><br><span class="line"> * ( (  \.---./  ) )</span><br><span class="line"> *  &#x27;.__/o   o\__.&#x27;</span><br><span class="line"> *     &#123;=  ^  =&#125;</span><br><span class="line"> *      &gt;  -  &lt;</span><br><span class="line"> *     /       \</span><br><span class="line"> *    //       \\</span><br><span class="line"> *   //|   .   |\\</span><br><span class="line"> *   &quot;&#x27;\       /&#x27;&quot;_.-~^`&#x27;-.</span><br><span class="line"> *      \  _  /--&#x27;         `</span><br><span class="line"> *    ___)( )(___</span><br><span class="line"> *   (((__) (__)))    高山仰止,景行行止.虽不能至,心向往之。</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int a[1005], n, k;</span><br><span class="line">// If this comment is removed the program will blow up</span><br><span class="line">// 如果删了此处注释程序就炸了</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	memset(a, 0, sizeof(a)); //将a置0,需包含&lt;string.h&gt;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	for (int i = 1; i &lt;= k; i++) &#123;</span><br><span class="line">		for (int j = 1; j &lt;= n; j++) &#123;</span><br><span class="line">			if (j % i == 0) &#123;</span><br><span class="line">				a[j] = !a[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	int first = 1;</span><br><span class="line">	for (int i = 1; i &lt;= n; i++)</span><br><span class="line">		if (a[i]) &#123;</span><br><span class="line">			cout &lt;&lt; &quot; &quot; &lt;&lt; i;</span><br><span class="line">		&#125;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-Hexo备份事项" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/03/Hexo%E5%A4%87%E4%BB%BD%E4%BA%8B%E9%A1%B9/">Hexo备份事项</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/03/Hexo%E5%A4%87%E4%BB%BD%E4%BA%8B%E9%A1%B9/" class="article-date">
+  <time datetime="2023-12-03T13:40:10.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"><a href="#由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署" class="headerlink" title="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"></a>由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署</h3><p>在博客根目录下创建deploy.sh文件，写入</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;Start&quot;</span><br><span class="line">git add .</span><br><span class="line">git commit -m backup</span><br><span class="line">git push</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line">echo &quot;Finish&quot;</span><br><span class="line">echo 按任意键继续</span><br><span class="line">read -n 1</span><br></pre></td></tr></table></figure></div>
+
+<p>保存后，在博客根目录双击执行或用命令.&#x2F;deploy.sh 即可实现博客的一键备份并部署</p>
+<h3 id="恢复博客"><a href="#恢复博客" class="headerlink" title="恢复博客"></a>恢复博客</h3><p>基础环境搭建<br>Hexo博客基础环境已经搭好：比如安装npm、git、nodejs、hexo安装…</p>
+<p>克隆项目到本地<br>Ctrl+Alt+T打开终端，输入</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@gitee.com:stringwind/blog_backup.git</span><br></pre></td></tr></table></figure></div>
+
+
+<p>git clone 自己的仓库地址</p>
+<p>恢复博客<br>在clone来的文件夹里执行</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></div>
+<p>&#x3D;&#x3D;注意由于主题未备份，需要进入站源文件修改主题为默认主题才可恢复&#x3D;&#x3D;<br>这样博客源文件就成功移植了，再用hexo clean、hexo g、hexo d即可部署完成</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-生活！" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/03/%E7%94%9F%E6%B4%BB%EF%BC%81/">12/3随笔</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/03/%E7%94%9F%E6%B4%BB%EF%BC%81/" class="article-date">
+  <time datetime="2023-12-03T09:55:43.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <ul>
+<li><em><strong>1.过去的我已经死亡，而今的我正在奔赴死亡</strong></em></li>
+<li>2.起心动念，每一刻都站在死亡之间循环重生<br>-<img src="https://cai6.xyz/file/6abbfd02eb52f284aa1e4.jpg"></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-My-lover" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/03/My-lover/">My lover</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/03/My-lover/" class="article-date">
+  <time datetime="2023-12-03T07:43:46.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="my-lover"><a href="#my-lover" class="headerlink" title="my lover"></a>my lover</h1><p><img src="https://cai6.xyz/file/af7dbf6d3e58627caaee1.jpg" alt="xcl"></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-hello-world" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/12/02/hello-world/">Hello World</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2023/12/02/hello-world/" class="article-date">
+  <time datetime="2023-12-02T14:50:59.523Z" itemprop="datePublished">2023-12-02</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+
+
+
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        天天开心
+      
+    </h3>
+    <p class="avatar-slogan">
+      我生以悦己，而非为他人所困
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/12/14/%E7%BA%BF%E6%80%A7%E8%A1%A8cpp-1/">线性表cpp</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/05/%E4%BB%8A%E6%97%A5%E6%90%AD%E5%BB%BA%E8%BF%9B%E5%BA%A6/">今日搭建进度</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/04/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90/">在hexo中插入音乐</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/04/12-4/">12/4</a>
+          </li>
+        
+          <li>
+            <a href="/2023/12/03/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B83-2/">算法竞赛入门经典3-2</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://cai6.xyz" title target='_blank'
+        >我的图床</a>
+      
+        <a style="display: block;" href="mailto:pengcai6@gmail.com" title target='_blank'
+        >Gmail邮箱</a>
+      
+        <a style="display: block;" href="https://github.com/pengcai6" title target='_blank'
+        >GitHub</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2023 cai6 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a target="_blank" rel="noopener" href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+    <a href="/categories" class="mobile-nav-link">分类</a>
+  
+    <a href="/archives" class="mobile-nav-link">存档</a>
+  
+    <a href="/schedule" class="mobile-nav-link">计划</a>
+  
+    <a href="/sitemap.xml" class="mobile-nav-link">导航</a>
+  
+    <a href="/404" class="mobile-nav-link">公共</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+
+<!-- 引用依赖 -->
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script>
+
+<!-- 我使用的APlayer本体 -->
+<div class="aplayer"
+  data-id="2551044964"
+  data-server="netease"
+  data-type="playlist"
+  data-fixed="true"
+  data-autoplay="true"
+  data-order="list"
+  data-volume="0.6"
+  data-theme="#cc543a"
+  data-preload="auto"
+  >
+
+  </div>
+<!--如果将本体放在body里面导致页面加载出现问题，请尝试放到body体后面-->
+
+<script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
