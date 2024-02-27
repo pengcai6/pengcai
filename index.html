@@ -82,6 +82,41 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-2-27-730飞行员兄弟-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/02/27/2024-2-27-730%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F-cpp/">2024-2-27-730飞行员兄弟.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/02/27/2024-2-27-730%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F-cpp/" class="article-date">
+  <time datetime="2024-02-27T03:17:37.000Z" itemprop="datePublished">2024-02-27</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-2-27-730飞行员兄弟-cpp"><a href="#2024-2-27-730飞行员兄弟-cpp" class="headerlink" title="2024-2-27-730飞行员兄弟.cpp"></a>2024-2-27-730飞行员兄弟.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">100010</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> h[N];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">check</span><span class="params">(<span class="type">int</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        e=e*<span class="number">2</span>-h[i];</span><br><span class="line">        <span class="keyword">if</span>(e&gt;=<span class="number">1e5</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(e&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;h[i]);</span><br><span class="line">    <span class="type">int</span> l=<span class="number">0</span>,r=<span class="number">1e5</span>;</span><br><span class="line">    <span class="keyword">while</span>(r&gt;l)&#123;</span><br><span class="line">     <span class="type">int</span> mid=l+r&gt;&gt;<span class="number">1</span>;</span><br><span class="line">     <span class="keyword">if</span>(<span class="built_in">check</span>(mid))</span><br><span class="line">     r=mid;</span><br><span class="line">     <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,l);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-test" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -423,42 +458,6 @@
 </article>
 
   
-    <article id="post-My-lover" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/03/My-lover/">My lover</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/03/My-lover/" class="article-date">
-  <time datetime="2023-12-03T07:43:46.000Z" itemprop="datePublished">2023-12-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="my-lover"><a href="#my-lover" class="headerlink" title="my lover"></a>my lover</h1><p><img src="https://cai6.xyz/file/af7dbf6d3e58627caaee1.jpg" alt="xcl"></p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -498,7 +497,7 @@
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
     </div>
   </div>
 
@@ -508,6 +507,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/02/27/2024-2-27-730%E9%A3%9E%E8%A1%8C%E5%91%98%E5%85%84%E5%BC%9F-cpp/">2024-2-27-730飞行员兄弟.cpp</a>
+          </li>
         
           <li>
             <a href="/2024/01/31/test/">dfs</a>
@@ -523,10 +526,6 @@
         
           <li>
             <a href="/2023/12/05/%E4%BB%8A%E6%97%A5%E6%90%AD%E5%BB%BA%E8%BF%9B%E5%BA%A6/">今日搭建进度</a>
-          </li>
-        
-          <li>
-            <a href="/2023/12/04/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E9%9F%B3%E4%B9%90/">在hexo中插入音乐</a>
           </li>
         
       </ul>
