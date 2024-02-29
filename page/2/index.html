@@ -82,6 +82,76 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-2-27-1221-四平方和-哈希表版本-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/02/27/2024-2-27-1221-%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%89%88%E6%9C%AC-cpp/">2024-2-27-1221-四平方和-哈希表版本.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/02/27/2024-2-27-1221-%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C-%E5%93%88%E5%B8%8C%E8%A1%A8%E7%89%88%E6%9C%AC-cpp/" class="article-date">
+  <time datetime="2024-02-27T13:32:07.000Z" itemprop="datePublished">2024-02-27</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-2-27-1221-四平方和-哈希表版本-cpp"><a href="#2024-2-27-1221-四平方和-哈希表版本-cpp" class="headerlink" title="2024-2-27-1221-四平方和-哈希表版本.cpp"></a>2024-2-27-1221-四平方和-哈希表版本.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> x first</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> y second</span></span><br><span class="line"><span class="keyword">typedef</span> pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt; PII;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2500010</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">sum</span>&#123;</span><br><span class="line">    <span class="type">int</span> s,c,d;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt; (<span class="type">const</span> sum &amp;t)<span class="type">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s!=t.s)<span class="keyword">return</span> s&lt;t.s;</span><br><span class="line">        <span class="keyword">if</span>(s!=t.c)<span class="keyword">return</span> c&lt;t.c;</span><br><span class="line">        <span class="keyword">return</span> d&lt;t.s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;sum[N];</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line">unordered_map&lt;<span class="type">int</span>, PII&gt; S;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span>    <span class="comment">//二分版本</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> c=<span class="number">0</span>;c*c&lt;=n;c++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> d=c;c*c+d*d&lt;=n;d++)</span><br><span class="line">        &#123;   <span class="type">int</span> t=c*c+d*d;</span><br><span class="line">            <span class="keyword">if</span>(S.<span class="built_in">count</span>(t)==<span class="number">0</span>)S[t]=&#123;c,d&#125;;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> a=<span class="number">0</span>;a*a&lt;=n;a++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> b=a;b*b+a*a&lt;=n;b++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t=n-a*a-b*b;</span><br><span class="line">            <span class="keyword">if</span>(S.<span class="built_in">count</span>(t))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d %d\n&quot;</span>,a,b,S[t].x,S[t].y );</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-2024-2-27-1221-四平方和-二分版本-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/02/27/2024-2-27-1221-%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C-%E4%BA%8C%E5%88%86%E7%89%88%E6%9C%AC-cpp/">2024-2-27-1221-四平方和-二分版本.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/02/27/2024-2-27-1221-%E5%9B%9B%E5%B9%B3%E6%96%B9%E5%92%8C-%E4%BA%8C%E5%88%86%E7%89%88%E6%9C%AC-cpp/" class="article-date">
+  <time datetime="2024-02-27T13:31:11.000Z" itemprop="datePublished">2024-02-27</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-2-27-1221-四平方和-二分版本-cpp"><a href="#2024-2-27-1221-四平方和-二分版本-cpp" class="headerlink" title="2024-2-27-1221-四平方和-二分版本.cpp"></a>2024-2-27-1221-四平方和-二分版本.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">2500010</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">sum</span>&#123;</span><br><span class="line">    <span class="type">int</span> s,c,d;</span><br><span class="line">    <span class="type">bool</span> <span class="keyword">operator</span>&lt; (<span class="type">const</span> sum &amp;t)<span class="type">const</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(s!=t.s)<span class="keyword">return</span> s&lt;t.s;</span><br><span class="line">        <span class="keyword">if</span>(s!=t.c)<span class="keyword">return</span> c&lt;t.c;</span><br><span class="line">        <span class="keyword">return</span> d&lt;t.s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;sum[N];</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"><span class="type">int</span> q[N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span>    <span class="comment">//二分版本</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> c=<span class="number">0</span>;c*c&lt;=n;c++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> d=c;c*c+d*d&lt;=n;d++)</span><br><span class="line">        sum[m++]=&#123;c*c+d*d,c,d&#125;;</span><br><span class="line"><span class="built_in">sort</span>(sum,sum+m);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> a=<span class="number">0</span>;a*a&lt;=n;a++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> b=a;b*b+a*a&lt;=n;b++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> t=n-a*a-b*b;</span><br><span class="line">            <span class="type">int</span> l=<span class="number">0</span>,r=m;</span><br><span class="line">            <span class="keyword">while</span>(r&gt;l)</span><br><span class="line">            &#123;<span class="type">int</span> mid=(r+l)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span>(sum[mid].s&gt;=t)</span><br><span class="line">                    r=mid;</span><br><span class="line">                <span class="keyword">else</span> l=mid+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(sum[l].s==t)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%d %d %d %d\n&quot;</span>,a,b,sum[l].c,sum[l].d);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-2-27-730飞行员兄弟-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -371,93 +441,6 @@
 </article>
 
   
-    <article id="post-Hexo备份事项" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/03/Hexo%E5%A4%87%E4%BB%BD%E4%BA%8B%E9%A1%B9/">Hexo备份事项</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/03/Hexo%E5%A4%87%E4%BB%BD%E4%BA%8B%E9%A1%B9/" class="article-date">
-  <time datetime="2023-12-03T13:40:10.000Z" itemprop="datePublished">2023-12-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h3 id="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"><a href="#由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署" class="headerlink" title="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"></a>由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署</h3><p>在博客根目录下创建deploy.sh文件，写入</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="VIM"><figure class="iseeu highlight /vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Start&quot;</span></span><br><span class="line">git <span class="built_in">add</span> .</span><br><span class="line">git commit -<span class="keyword">m</span> backup</span><br><span class="line">git push</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Finish&quot;</span></span><br><span class="line"><span class="keyword">echo</span> 按任意键继续</span><br><span class="line"><span class="keyword">read</span> -n <span class="number">1</span></span><br></pre></td></tr></table></figure></div>
-
-<p>保存后，在博客根目录双击执行或用命令.&#x2F;deploy.sh 即可实现博客的一键备份并部署</p>
-<h3 id="恢复博客"><a href="#恢复博客" class="headerlink" title="恢复博客"></a>恢复博客</h3><p>基础环境搭建<br>Hexo博客基础环境已经搭好：比如安装npm、git、nodejs、hexo安装…</p>
-<p>克隆项目到本地<br>Ctrl+Alt+T打开终端，输入</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@gitee.com:stringwind/blog_backup.git</span><br></pre></td></tr></table></figure></div>
-
-
-<p>git clone 自己的仓库地址</p>
-<p>恢复博客<br>在clone来的文件夹里执行</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMAKE"><figure class="iseeu highlight /cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-cli</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-git</span><br></pre></td></tr></table></figure></div>
-<p>&#x3D;&#x3D;注意由于主题未备份，需要进入站源文件修改主题为默认主题才可恢复&#x3D;&#x3D;<br>这样博客源文件就成功移植了，再用hexo clean、hexo g、hexo d即可部署完成</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-生活！" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/12/03/%E7%94%9F%E6%B4%BB%EF%BC%81/">12/3随笔</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2023/12/03/%E7%94%9F%E6%B4%BB%EF%BC%81/" class="article-date">
-  <time datetime="2023-12-03T09:55:43.000Z" itemprop="datePublished">2023-12-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <ul>
-<li><em><strong>1.过去的我已经死亡，而今的我正在奔赴死亡</strong></em></li>
-<li>2.起心动念，每一刻都站在死亡之间循环重生<br>-<img src="https://cai6.xyz/file/6abbfd02eb52f284aa1e4.jpg"></li>
-</ul>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -509,6 +492,14 @@
       <ul>
         
           <li>
+            <a href="/2024/02/29/2024-2-29-02-01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-cpp/">2024-2-29-02-01背包问题.cpp</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/29/2024-2-29-503-%E5%80%9F%E6%95%99%E5%AE%A4-cpp/">2024-2-29-503-借教室.cpp</a>
+          </li>
+        
+          <li>
             <a href="/2024/02/29/2024-2-28-1205-%E4%B9%B0%E4%B8%8D%E5%88%B0%E7%9A%84%E6%95%B0%E7%9B%AE-cpp/">2024-2-28-1205-买不到的数目.cpp</a>
           </li>
         
@@ -518,14 +509,6 @@
         
           <li>
             <a href="/2024/02/29/%E5%AE%9E%E7%8E%B0%E5%90%91%E4%B8%8A%E5%8F%96%E6%95%B4/">实现向上取整</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/28/2024-2-28-1230-K%E5%80%8D%E5%8C%BA%E9%97%B4-cpp/">2024-2-28-1230-K倍区间.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/28/2024-2-28-99-%E6%BF%80%E5%85%89%E7%82%B8%E5%BC%B9-cpp/">2024-2-28-99-激光炸弹.cpp</a>
           </li>
         
       </ul>
