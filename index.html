@@ -82,6 +82,146 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-3-4-1229-日期问题-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/">2024-3-4-1229-日期问题.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/" class="article-date">
+  <time datetime="2024-03-04T10:23:26.000Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-4-1229-日期问题-cpp"><a href="#2024-3-4-1229-日期问题-cpp" class="headerlink" title="2024-3-4-1229-日期问题.cpp"></a>2024-3-4-1229-日期问题.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PROCESSING"><figure class="iseeu highlight /processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"><span class="type">int</span> days[<span class="number">13</span>]=&#123;<span class="number">0</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line">bool <span class="title function_">check_vaild</span>(<span class="type">int</span> <span class="built_in">year</span>,<span class="type">int</span> <span class="built_in">month</span>,<span class="type">int</span> <span class="built_in">day</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>==<span class="number">0</span>||<span class="built_in">month</span>&gt;<span class="number">12</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>!=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">day</span>==<span class="number">0</span>||<span class="built_in">day</span>&gt;days[<span class="built_in">month</span>])<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>==<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> leap=<span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span>&amp;&amp;<span class="built_in">year</span>%<span class="number">100</span>||<span class="built_in">year</span>%<span class="number">400</span>==<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">day</span>==<span class="number">0</span>||<span class="built_in">day</span>&gt;<span class="number">28</span>+leap)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span>()</span><br><span class="line">&#123;       <span class="type">int</span> a,b,c;</span><br><span class="line">    <span class="title function_">scanf</span>(<span class="string">&quot;%d/%d/%d&quot;</span>, &amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> date=<span class="number">19600101</span>;date&lt;<span class="number">20591231</span>;date++)&#123;</span><br><span class="line">        <span class="type">int</span> <span class="built_in">year</span>=date/<span class="number">10000</span>,<span class="built_in">month</span>=date%<span class="number">10000</span>/<span class="number">100</span>,<span class="built_in">day</span>=date%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_">check_vaild</span>(<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">year</span>%<span class="number">100</span>==a&amp;&amp;<span class="built_in">month</span>==b&amp;&amp;<span class="built_in">day</span>==c||<span class="comment">//年月日表示</span></span><br><span class="line">            <span class="built_in">year</span>%<span class="number">100</span>==c&amp;&amp;<span class="built_in">month</span>==a&amp;&amp;<span class="built_in">day</span>==b||<span class="comment">//月日年表示</span></span><br><span class="line">            <span class="built_in">year</span>%<span class="number">100</span>==c&amp;&amp;<span class="built_in">month</span>==b&amp;&amp;<span class="built_in">day</span>==a<span class="comment">//日月年表示</span></span><br><span class="line">            )</span><br><span class="line">            <span class="title function_">printf</span>(<span class="string">&quot;%d-%02d-%02d\n&quot;</span>,<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>);<span class="comment">//02表示不足2位补0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-2024-3-4-1219-移动距离-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/">2024-3-4-1219-移动距离.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/" class="article-date">
+  <time datetime="2024-03-04T08:31:37.000Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-4-1219-移动距离-cpp"><a href="#2024-3-4-1219-移动距离-cpp" class="headerlink" title="2024-3-4-1219-移动距离.cpp"></a>2024-3-4-1219-移动距离.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,m,w;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;cin&gt;&gt;w&gt;&gt;m&gt;&gt;n;</span><br><span class="line">m--;</span><br><span class="line">n--;</span><br><span class="line"><span class="type">int</span> x1=m/w,x2=n/w;</span><br><span class="line"><span class="type">int</span> y1=m%w,y2=n%w;</span><br><span class="line"><span class="keyword">if</span>(x1%<span class="number">2</span>)y1=w<span class="number">-1</span>-y1;</span><br><span class="line"><span class="keyword">if</span>(x2%<span class="number">2</span>)y2=w<span class="number">-1</span>-y2;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> res=<span class="built_in">abs</span>(x1-x2)+<span class="built_in">abs</span>(y1-y2);</span><br><span class="line">    cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-2024-3-3-466-回文日期-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/04/2024-3-3-466-%E5%9B%9E%E6%96%87%E6%97%A5%E6%9C%9F-cpp/">2024-3-3-466-回文日期.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/04/2024-3-3-466-%E5%9B%9E%E6%96%87%E6%97%A5%E6%9C%9F-cpp/" class="article-date">
+  <time datetime="2024-03-04T08:31:02.000Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-3-466-回文日期-cpp"><a href="#2024-3-3-466-回文日期-cpp" class="headerlink" title="2024-3-3-466-回文日期.cpp"></a>2024-3-3-466-回文日期.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PGSQL"><figure class="iseeu highlight /pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#include &lt;iostream&gt;</span></span><br><span class="line"><span class="meta">#include &lt;sstream&gt;</span></span><br><span class="line"><span class="meta">#include &lt;algorithm&gt;</span></span><br><span class="line"><span class="keyword">using</span> namespace std;</span><br><span class="line">const <span class="type">int</span> N = <span class="number">10010</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> day1,day2,res,days[<span class="number">13</span>]=&#123;<span class="number">0</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="keyword">check</span>(<span class="type">int</span> <span class="type">date</span>)</span><br><span class="line">&#123;<span class="type">int</span> year=<span class="type">date</span>/<span class="number">10000</span>;</span><br><span class="line"><span class="type">int</span> mouth=<span class="type">date</span>%<span class="number">10000</span>/<span class="number">100</span>;</span><br><span class="line"><span class="type">int</span> day=<span class="type">date</span>%<span class="number">100</span>;</span><br><span class="line"><span class="keyword">if</span>(mouth==<span class="number">0</span>||mouth&gt;<span class="number">12</span>)<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"><span class="keyword">if</span>(day==<span class="number">0</span>||mouth!=<span class="number">2</span>&amp;&amp;day&gt;days[mouth]) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"><span class="type">int</span> leap=year%<span class="number">100</span>&amp;&amp;year%<span class="number">4</span>==<span class="number">0</span>||year%<span class="number">400</span>==<span class="number">0</span>;//注意闰年判断条件</span><br><span class="line"><span class="keyword">if</span>(mouth==<span class="number">2</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(day&gt;<span class="number">28</span>+leap) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;day1&gt;&gt;day2;</span><br><span class="line">    <span class="type">int</span> rea=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1000</span>;i&lt;<span class="number">10000</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> <span class="type">date</span>=i,x=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;<span class="number">4</span>;j++)</span><br><span class="line">            <span class="type">date</span>=<span class="type">date</span>*<span class="number">10</span>+x%<span class="number">10</span>,x/=<span class="number">10</span>;</span><br><span class="line">        <span class="keyword">if</span>(day1&lt;=<span class="type">date</span>&amp;&amp;day2&gt;=<span class="type">date</span>&amp;&amp;<span class="keyword">check</span>(<span class="type">date</span>))res++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-2024-3-3-1245-特别数的和-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/04/2024-3-3-1245-%E7%89%B9%E5%88%AB%E6%95%B0%E7%9A%84%E5%92%8C-cpp/">2024-3-3-1245- 特别数的和.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/04/2024-3-3-1245-%E7%89%B9%E5%88%AB%E6%95%B0%E7%9A%84%E5%92%8C-cpp/" class="article-date">
+  <time datetime="2024-03-04T08:30:00.000Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-3-1245-特别数的和-cpp"><a href="#2024-3-3-1245-特别数的和-cpp" class="headerlink" title="2024-3-3-1245- 特别数的和.cpp"></a>2024-3-3-1245- 特别数的和.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n,res;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;<span class="type">int</span> j=i;</span><br><span class="line">        <span class="keyword">while</span>(j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> cnt=j%<span class="number">10</span>;</span><br><span class="line">            j=j/<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">if</span>(cnt==<span class="number">2</span>||cnt==<span class="number">0</span>||cnt==<span class="number">1</span>||cnt==<span class="number">9</span>)</span><br><span class="line">            &#123;res+=i;<span class="keyword">break</span>;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-3-1204-错误票据-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -292,146 +432,6 @@
 </article>
 
   
-    <article id="post-2024-3-1-895-最长上升子序列-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/03/2024-3-1-895-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97-cpp/">2024-3-1-895-最长上升子序列.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/03/03/2024-3-1-895-%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97-cpp/" class="article-date">
-  <time datetime="2024-03-03T10:23:58.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-3-1-895-最长上升子序列-cpp"><a href="#2024-3-1-895-最长上升子序列-cpp" class="headerlink" title="2024-3-1-895-最长上升子序列.cpp"></a>2024-3-1-895-最长上升子序列.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">5005</span>;</span><br><span class="line"><span class="type">int</span> a[N],f[N];</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">    <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">&#123;   f[i]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;i;j++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(a[i]&gt;a[j])</span><br><span class="line">            f[i]=<span class="built_in">max</span>(f[i],f[j]+<span class="number">1</span>);</span><br><span class="line">        res=<span class="built_in">max</span>(res,f[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-2024-3-1-1212-地宫取宝-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/03/2024-3-1-1212-%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D-cpp/">2024-3-1-1212- 地宫取宝.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/03/03/2024-3-1-1212-%E5%9C%B0%E5%AE%AB%E5%8F%96%E5%AE%9D-cpp/" class="article-date">
-  <time datetime="2024-03-03T10:23:13.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-3-1-1212-地宫取宝-cpp"><a href="#2024-3-1-1212-地宫取宝-cpp" class="headerlink" title="2024-3-1-1212- 地宫取宝.cpp"></a>2024-3-1-1212- 地宫取宝.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PROLOG"><figure class="iseeu highlight /prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int <span class="symbol">N</span> = <span class="number">55</span>;</span><br><span class="line">int <span class="symbol">MOD</span>=<span class="number">1000000007</span>;</span><br><span class="line">int n,m,k;</span><br><span class="line">int w[<span class="symbol">N</span>][<span class="symbol">N</span>];</span><br><span class="line">int f[<span class="symbol">N</span>][<span class="symbol">N</span>][<span class="number">13</span>][<span class="number">14</span>];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m&gt;&gt;k;</span><br><span class="line">    for(int i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">        for(int j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            cin&gt;&gt;w[i][j];</span><br><span class="line">            w[i][j]++;</span><br><span class="line">        &#125;</span><br><span class="line">    f[<span class="number">1</span>][<span class="number">1</span>][<span class="number">1</span>][w[<span class="number">1</span>][<span class="number">1</span>]]=<span class="number">1</span>;</span><br><span class="line">    f[<span class="number">1</span>][<span class="number">1</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    for(int i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">        for(int j= <span class="number">1</span>; j &lt;= m; j ++ )</span><br><span class="line">        &#123;if(i==<span class="number">1</span>||j==<span class="number">1</span>) continue;</span><br><span class="line">        for(int u = <span class="number">0</span>;u&lt;= k; u ++ )</span><br><span class="line">        for(int v = <span class="number">0</span>; v &lt;= <span class="number">13</span>; v ++ )</span><br><span class="line">        &#123;</span><br><span class="line">            int &amp;val=f[i][j][u][v];</span><br><span class="line">            val=(val+f[i<span class="number">-1</span>][j][u][v])<span class="comment">%MOD;</span></span><br><span class="line">            val=(val+f[i][j<span class="number">-1</span>][u][v])<span class="comment">%MOD;</span></span><br><span class="line">            if(u&gt;<span class="number">0</span>&amp;&amp;v==w[i][j])</span><br><span class="line">            &#123;</span><br><span class="line">                for(int c=<span class="number">0</span>;c&lt;v;c++)</span><br><span class="line">                &#123;</span><br><span class="line">                    val=(val+f[i<span class="number">-1</span>][j][u<span class="number">-1</span>][c])<span class="comment">%MOD;</span></span><br><span class="line">                    val=(val+f[i][j<span class="number">-1</span>][u<span class="number">-1</span>][c]<span class="comment">%MOD);</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        int res=<span class="number">0</span>;</span><br><span class="line">        for (int i = <span class="number">0</span>; i &lt; <span class="number">13</span>; i ++ ) res=(res+f[n][m][k][i])<span class="comment">%MOD;</span></span><br><span class="line">        cout&lt;&lt;res;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-2024-3-1-1015-摘花生-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/03/2024-3-1-1015-%E6%91%98%E8%8A%B1%E7%94%9F-cpp/">2024-3-1-1015-摘花生.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/03/03/2024-3-1-1015-%E6%91%98%E8%8A%B1%E7%94%9F-cpp/" class="article-date">
-  <time datetime="2024-03-03T10:22:30.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-3-1-1015-摘花生-cpp"><a href="#2024-3-1-1015-摘花生-cpp" class="headerlink" title="2024-3-1-1015-摘花生.cpp"></a>2024-3-1-1015-摘花生.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N =<span class="number">105</span>;</span><br><span class="line"><span class="type">int</span> res;</span><br><span class="line"><span class="type">int</span> T,R,C,M[N][N],F[N][N];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin&gt;&gt;T;</span><br><span class="line"><span class="keyword">while</span>(T--)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;R,&amp;C);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=R;i++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=C;j++)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;M[i][j]);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=R;i++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=C;j++)</span><br><span class="line">       &#123;F[i][j]=M[i][j];</span><br><span class="line">        F[i][j]+=<span class="built_in">max</span>(F[i<span class="number">-1</span>][j],F[i][j<span class="number">-1</span>]);</span><br><span class="line">&#125;cout&lt;&lt;F[R][C]&lt;&lt;endl;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
-    <article id="post-2024-2-29-02-01背包问题-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/02/29/2024-2-29-02-01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-cpp/">2024-2-29-02-01背包问题.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/02/29/2024-2-29-02-01%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98-cpp/" class="article-date">
-  <time datetime="2024-02-29T13:26:37.000Z" itemprop="datePublished">2024-02-29</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-2-29-02-01背包问题-cpp"><a href="#2024-2-29-02-01背包问题-cpp" class="headerlink" title="2024-2-29-02-01背包问题.cpp"></a>2024-2-29-02-01背包问题.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include&lt;cstring&gt;</span><br><span class="line">#include&lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N=1005;</span><br><span class="line"></span><br><span class="line">int n,m;</span><br><span class="line">int v[N],w[N];</span><br><span class="line">int f[N][N];</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) scanf(&quot;%d%d&quot;,&amp;v[i],&amp;w[i]);</span><br><span class="line">    for(int i=1;i&lt;=n;i++)</span><br><span class="line">        for(int j=1;j&lt;=m;j++)</span><br><span class="line">        &#123;f[i][j]=f[i-1][j];</span><br><span class="line">        if(j&gt;=v[i]) f[i][j]=max(f[i][j],f[i-1][j-v[i]]+w[i]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">printf(&quot;%d\n&quot;,f[n][m]);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -483,23 +483,23 @@
       <ul>
         
           <li>
+            <a href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/">2024-3-4-1229-日期问题.cpp</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/">2024-3-4-1219-移动距离.cpp</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/04/2024-3-3-466-%E5%9B%9E%E6%96%87%E6%97%A5%E6%9C%9F-cpp/">2024-3-3-466-回文日期.cpp</a>
+          </li>
+        
+          <li>
+            <a href="/2024/03/04/2024-3-3-1245-%E7%89%B9%E5%88%AB%E6%95%B0%E7%9A%84%E5%92%8C-cpp/">2024-3-3-1245- 特别数的和.cpp</a>
+          </li>
+        
+          <li>
             <a href="/2024/03/03/2024-3-3-1204-%E9%94%99%E8%AF%AF%E7%A5%A8%E6%8D%AE-cpp/">2024-3-3-1204- 错误票据.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-2-562-%E5%A3%81%E7%94%BB-cpp/">2024-3-2-562-壁画.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-2-4262-%E7%A9%BA%E8%B0%83-cpp/">2024-3-2-4262-空调.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-2-1236-%E9%80%92%E5%A2%9E%E4%B8%89%E5%85%83%E7%BB%84-cpp/">2024-3-2-1236-递增三元组.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-2-1214-%E6%B3%A2%E5%8A%A8%E6%95%B0%E5%88%97-cpp/">2024-3-2-1214-波动数列.cpp</a>
           </li>
         
       </ul>
