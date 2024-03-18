@@ -82,6 +82,41 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-3-2-1210-连号区间数-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/03/2024-3-2-1210-%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-cpp/">2024-3-2-1210-连号区间数.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/03/2024-3-2-1210-%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-cpp/" class="article-date">
+  <time datetime="2024-03-03T10:24:33.000Z" itemprop="datePublished">2024-03-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-2-1210-连号区间数-cpp"><a href="#2024-3-2-1210-连号区间数-cpp" class="headerlink" title="2024-3-2-1210-连号区间数.cpp"></a>2024-3-2-1210-连号区间数.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">10010</span>;</span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"><span class="type">int</span> n,res;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> manx=-N,minx=N;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt;n ; ++j)</span><br><span class="line">    &#123;</span><br><span class="line">        manx=<span class="built_in">max</span>(manx,a[j]);</span><br><span class="line">        minx=<span class="built_in">min</span>(minx,a[j]);</span><br><span class="line">        <span class="keyword">if</span>(manx-minx==j-i) res++;</span><br><span class="line">&#125;</span><br><span class="line">    &#125;</span><br><span class="line">cout&lt;&lt;res;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-1-895-最长上升子序列-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -398,41 +433,6 @@
 </article>
 
   
-    <article id="post-2024-2-28-99-激光炸弹-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/02/28/2024-2-28-99-%E6%BF%80%E5%85%89%E7%82%B8%E5%BC%B9-cpp/">2024-2-28-99-激光炸弹.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/02/28/2024-2-28-99-%E6%BF%80%E5%85%89%E7%82%B8%E5%BC%B9-cpp/" class="article-date">
-  <time datetime="2024-02-28T09:14:38.000Z" itemprop="datePublished">2024-02-28</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-2-28-99-激光炸弹-cpp"><a href="#2024-2-28-99-激光炸弹-cpp" class="headerlink" title="2024-2-28-99-激光炸弹.cpp"></a>2024-2-28-99-激光炸弹.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PERL"><figure class="iseeu highlight /perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line"><span class="comment">#include&lt;cstdio&gt;</span></span><br><span class="line"><span class="comment">#include&lt;cstring&gt;</span></span><br><span class="line"><span class="comment">#include&lt;algorithm&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">const <span class="keyword">int</span> N=<span class="number">5010</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> n,m; <span class="keyword">int</span> cnt,r; <span class="keyword">int</span> s[N][N];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main() &#123; cin&gt;&gt;cnt&gt;&gt;r; r=min(<span class="number">5001</span>,r); n=m=r;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(cnt--)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="keyword">x</span>,<span class="keyword">y</span>,w;</span><br><span class="line">    cin&gt;&gt;<span class="keyword">x</span>&gt;&gt;<span class="keyword">y</span>&gt;&gt;w;</span><br><span class="line">    <span class="keyword">x</span>++,<span class="keyword">y</span>++;</span><br><span class="line">    n=max(n,<span class="keyword">x</span>),m=max(m,<span class="keyword">y</span>);</span><br><span class="line">    <span class="regexp">s[x][y]</span>+=w;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=m;j++)</span><br><span class="line">        s[i][j]+=<span class="regexp">s[i-1][j]</span>+<span class="regexp">s[i][j-1]</span>-<span class="regexp">s[i-1][j-1]</span>;<span class="regexp">//</span>二维前缀和</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> res=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=r;i&lt;=n;i++)</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=r;j&lt;=m;j++)</span><br><span class="line">        res=max(res,<span class="regexp">s[i][j]</span>-<span class="regexp">s[i-r][j]</span>-<span class="regexp">s[i][j-r]</span>+<span class="regexp">s[i-r][j-r]</span>); <span class="regexp">//</span>计算滑动窗口中的最大值</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;res&lt;&lt;endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -484,6 +484,10 @@
       <ul>
         
           <li>
+            <a href="/2024/03/18/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">Git使用方法</a>
+          </li>
+        
+          <li>
             <a href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/">2024-3-4-1229-日期问题.cpp</a>
           </li>
         
@@ -497,10 +501,6 @@
         
           <li>
             <a href="/2024/03/04/2024-3-3-1245-%E7%89%B9%E5%88%AB%E6%95%B0%E7%9A%84%E5%92%8C-cpp/">2024-3-3-1245- 特别数的和.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-3-1204-%E9%94%99%E8%AF%AF%E7%A5%A8%E6%8D%AE-cpp/">2024-3-3-1204- 错误票据.cpp</a>
           </li>
         
       </ul>

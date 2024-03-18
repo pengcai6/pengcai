@@ -82,6 +82,63 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-Git使用方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/18/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">Git使用方法</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/18/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2024-03-18T12:37:59.000Z" itemprop="datePublished">2024-03-18</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <ul>
+<li>** 1 工作流 **<br>首先你可以提出更改（把它们添加到暂存区），使用如下命令：</li>
+</ul>
+<pre><code>git add &lt;filename&gt;  //表示添加文件到缓存区
+git add *或git add . //表示添加所有1文件
+</code></pre>
+<ul>
+<li>** 2 **<br>这是 git 基本工作流程的第一步；使用如下命令以实际提交改动：</li>
+</ul>
+<p><code>git commit -m &quot;代码提交信息&quot;  </code><br>现在，你的改动已经提交到了 HEAD，但是还没到你的远端仓库。  </p>
+<ul>
+<li>** 3 推送改动**<br>你的改动现在已经在本地仓库的 HEAD 中了。执行如下命令以将这些改动提交到远端仓库：</li>
+</ul>
+<p><code>git push origin master</code><br>可以把 master 换成你想要推送的任何分支。<br>如果你还没有克隆现有仓库，并欲将你的仓库连接到某个远程服务器，你可以使用如下命令添加：<br><code>git remote add origin &lt;server&gt; </code><br>如此你就能够将你的改动推送到所添加的服务器上去了。</p>
+<ul>
+<li>** 4 更新与合并 **<br>要更新你的本地仓库至最新改动，执行：<br>git pull<br>以在你的工作目录中 获取（fetch） 并 合并（merge） 远端的改动。<br>要合并其他分支到你的当前分支（例如 master），执行：</li>
+</ul>
+<p><code>git merge &lt;branch&gt;</code><br>在这两种情况下，git 都会尝试去自动合并改动。遗憾的是，这可能并非每次都成功，并可能出现冲突（conflicts）。 这时候就需要你修改这些文件来手动合并这些冲突（conflicts）。改完之后，你需要执行如下命令以将它们标记为合并成功：<br><code>git add &lt;filename&gt; </code><br>在合并改动之前，你可以使用如下命令预览差异：<br><code>git diff &lt;source_branch&gt; &lt;target_branch&gt;   </code></p>
+<ul>
+<li><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3></li>
+</ul>
+<p>分支是用来将特性开发绝缘开来的。在你创建仓库的时候，master 是”默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。<br>创建一个叫做”feature_x”的分支，并切换过去：<br><code>git checkout -b feature_x </code><br>切换回主分支：<br><code>git checkout master  </code><br>再把新建的分支删掉：<br><code>git branch -d feature_x  </code><br>除非你将分支推送到远端仓库，不然该分支就是 不为他人所见的：<br><code>git push origin &lt;branch&gt;  </code>  </p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-4-1229-日期问题-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -397,41 +454,6 @@
 </article>
 
   
-    <article id="post-2024-3-2-1210-连号区间数-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/03/2024-3-2-1210-%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-cpp/">2024-3-2-1210-连号区间数.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/03/03/2024-3-2-1210-%E8%BF%9E%E5%8F%B7%E5%8C%BA%E9%97%B4%E6%95%B0-cpp/" class="article-date">
-  <time datetime="2024-03-03T10:24:33.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-3-2-1210-连号区间数-cpp"><a href="#2024-3-2-1210-连号区间数-cpp" class="headerlink" title="2024-3-2-1210-连号区间数.cpp"></a>2024-3-2-1210-连号区间数.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">10010</span>;</span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line"><span class="type">int</span> n,res;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> manx=-N,minx=N;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> j = i; j &lt;n ; ++j)</span><br><span class="line">    &#123;</span><br><span class="line">        manx=<span class="built_in">max</span>(manx,a[j]);</span><br><span class="line">        minx=<span class="built_in">min</span>(minx,a[j]);</span><br><span class="line">        <span class="keyword">if</span>(manx-minx==j-i) res++;</span><br><span class="line">&#125;</span><br><span class="line">    &#125;</span><br><span class="line">cout&lt;&lt;res;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -483,6 +505,10 @@
       <ul>
         
           <li>
+            <a href="/2024/03/18/Git%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">Git使用方法</a>
+          </li>
+        
+          <li>
             <a href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/">2024-3-4-1229-日期问题.cpp</a>
           </li>
         
@@ -496,10 +522,6 @@
         
           <li>
             <a href="/2024/03/04/2024-3-3-1245-%E7%89%B9%E5%88%AB%E6%95%B0%E7%9A%84%E5%92%8C-cpp/">2024-3-3-1245- 特别数的和.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/03/2024-3-3-1204-%E9%94%99%E8%AF%AF%E7%A5%A8%E6%8D%AE-cpp/">2024-3-3-1204- 错误票据.cpp</a>
           </li>
         
       </ul>
