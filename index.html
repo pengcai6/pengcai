@@ -82,6 +82,44 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-test" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/29/test/">test</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/29/test/" class="article-date">
+  <time datetime="2024-03-29T07:53:30.000Z" itemprop="datePublished">2024-03-29</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <details>
+  <summary> 折叠代码示例 </summary>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  代码</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+</details>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-21" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -200,7 +238,47 @@ git add *或git add . //表示添加所有1文件
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h1 id="2024-3-4-1229-日期问题-cpp"><a href="#2024-3-4-1229-日期问题-cpp" class="headerlink" title="2024-3-4-1229-日期问题.cpp"></a>2024-3-4-1229-日期问题.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PROCESSING"><figure class="iseeu highlight /processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"><span class="type">int</span> days[<span class="number">13</span>]=&#123;<span class="number">0</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line">bool <span class="title function_">check_vaild</span>(<span class="type">int</span> <span class="built_in">year</span>,<span class="type">int</span> <span class="built_in">month</span>,<span class="type">int</span> <span class="built_in">day</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>==<span class="number">0</span>||<span class="built_in">month</span>&gt;<span class="number">12</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>!=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">day</span>==<span class="number">0</span>||<span class="built_in">day</span>&gt;days[<span class="built_in">month</span>])<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">month</span>==<span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> leap=<span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span>&amp;&amp;<span class="built_in">year</span>%<span class="number">100</span>||<span class="built_in">year</span>%<span class="number">400</span>==<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">day</span>==<span class="number">0</span>||<span class="built_in">day</span>&gt;<span class="number">28</span>+leap)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span>()</span><br><span class="line">&#123;       <span class="type">int</span> a,b,c;</span><br><span class="line">    <span class="title function_">scanf</span>(<span class="string">&quot;%d/%d/%d&quot;</span>, &amp;a,&amp;b,&amp;c);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> date=<span class="number">19600101</span>;date&lt;<span class="number">20591231</span>;date++)&#123;</span><br><span class="line">        <span class="type">int</span> <span class="built_in">year</span>=date/<span class="number">10000</span>,<span class="built_in">month</span>=date%<span class="number">10000</span>/<span class="number">100</span>,<span class="built_in">day</span>=date%<span class="number">100</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="title function_">check_vaild</span>(<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">year</span>%<span class="number">100</span>==a&amp;&amp;<span class="built_in">month</span>==b&amp;&amp;<span class="built_in">day</span>==c||<span class="comment">//年月日表示</span></span><br><span class="line">            <span class="built_in">year</span>%<span class="number">100</span>==c&amp;&amp;<span class="built_in">month</span>==a&amp;&amp;<span class="built_in">day</span>==b||<span class="comment">//月日年表示</span></span><br><span class="line">            <span class="built_in">year</span>%<span class="number">100</span>==c&amp;&amp;<span class="built_in">month</span>==b&amp;&amp;<span class="built_in">day</span>==a<span class="comment">//日月年表示</span></span><br><span class="line">            )</span><br><span class="line">            <span class="title function_">printf</span>(<span class="string">&quot;%d-%02d-%02d\n&quot;</span>,<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>);<span class="comment">//02表示不足2位补0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+        <h1 id="2024-3-4-1229-日期问题-cpp"><a href="#2024-3-4-1229-日期问题-cpp" class="headerlink" title="2024-3-4-1229-日期问题.cpp"></a>2024-3-4-1229-日期问题.cpp</h1><details>
+<summary> 2024-3-4-1229-日期问题.cpp </summary>
+
+<pre><code class="c++">
+#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include &lt;algorithm&gt;
+
+using namespace std;
+int days[13]=&#123;0,31,28,31,30,31,30,31,31,30,31,30,31&#125;;
+bool check_vaild(int year,int month,int day)&#123;
+    if(month==0||month&gt;12)return false;
+    if(month!=2)&#123;
+        if(day==0||day&gt;days[month])return false;&#125;
+
+    if(month==2)
+    &#123;
+        int leap=year%4==0&amp;&amp;year%100||year%400==0;
+        if(day==0||day&gt;28+leap)return false;
+    &#125;
+    return true;
+&#125;
+int main()
+&#123;       int a,b,c;
+    scanf(&quot;%d/%d/%d&quot;, &amp;a,&amp;b,&amp;c);
+    for(int date=19600101;date&lt;20591231;date++)&#123;
+        int year=date/10000,month=date%10000/100,day=date%100;
+        if(check_vaild(year,month,day))
+        &#123;
+            if(year%100==a&amp;&amp;month==b&amp;&amp;day==c||//年月日表示
+            year%100==c&amp;&amp;month==a&amp;&amp;day==b||//月日年表示
+            year%100==c&amp;&amp;month==b&amp;&amp;day==a//日月年表示
+            )
+            printf(&quot;%d-%02d-%02d\n&quot;,year,month,day);//02表示不足2位补0
+        &#125;
+    &#125;
+
+        return 0;
+&#125;
+</code></pre>
+</details>
       
     </div>
     
@@ -420,41 +498,6 @@ git add *或git add . //表示添加所有1文件
 </article>
 
   
-    <article id="post-2024-3-2-1236-递增三元组-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/03/03/2024-3-2-1236-%E9%80%92%E5%A2%9E%E4%B8%89%E5%85%83%E7%BB%84-cpp/">2024-3-2-1236-递增三元组.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/03/03/2024-3-2-1236-%E9%80%92%E5%A2%9E%E4%B8%89%E5%85%83%E7%BB%84-cpp/" class="article-date">
-  <time datetime="2024-03-03T10:25:37.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-3-2-1236-递增三元组-cpp"><a href="#2024-3-2-1236-递增三元组-cpp" class="headerlink" title="2024-3-2-1236-递增三元组.cpp"></a>2024-3-2-1236-递增三元组.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PROLOG"><figure class="iseeu highlight /prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int <span class="symbol">N</span> = <span class="number">100010</span>;</span><br><span class="line">int cnt[<span class="symbol">N</span>],as[<span class="symbol">N</span>],cs[<span class="symbol">N</span>];//as[i]表示在a[]中有多少数小于b[i]</span><br><span class="line">int a[<span class="symbol">N</span>],b[<span class="symbol">N</span>],c[<span class="symbol">N</span>],s[<span class="symbol">N</span>],n;//cs[i]表示在c[]中有多少数大于b[i]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;   cin&gt;&gt;n;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;a[i]),a[i]++;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;b[i]),b[i]++;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;c[i]),c[i]++;</span><br><span class="line"></span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cnt[a[i]]++;</span><br><span class="line">    for (int i = <span class="number">1</span>; i &lt;<span class="symbol">N</span>; i ++ )s[i]=s[i<span class="number">-1</span>]+cnt[i];</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) as[i]=s[b[i]<span class="number">-1</span>];</span><br><span class="line"></span><br><span class="line">    //求cs[]</span><br><span class="line">    memset(cnt, <span class="number">0</span>, sizeof cnt);memset(s,<span class="number">0</span>,sizeof s);</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cnt[c[i]]++;</span><br><span class="line">    for(int i=<span class="number">1</span>;i&lt;<span class="symbol">N</span>;i++)s[i]=s[i<span class="number">-1</span>]+cnt[i];</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cs[i]=s[<span class="symbol">N</span><span class="number">-1</span>]-s[b[i]];</span><br><span class="line"></span><br><span class="line">    long long res=<span class="number">0</span>;</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++) res+=(long long)as[i]*cs[i];<span class="comment">/*错误实例res+=</span></span><br><span class="line"><span class="comment">    (long long)(as[i]*cs[i]);不需要加括号*/</span></span><br><span class="line">    cout&lt;&lt;res&lt;&lt;endl;</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -494,7 +537,7 @@ git add *或git add . //表示添加所有1文件
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
     </div>
   </div>
 
@@ -504,6 +547,10 @@ git add *或git add . //表示添加所有1文件
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/03/29/test/">test</a>
+          </li>
         
           <li>
             <a href="/2024/03/21/2024-3-21/">2024-3-21</a>
@@ -519,10 +566,6 @@ git add *或git add . //表示添加所有1文件
         
           <li>
             <a href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/">2024-3-4-1219-移动距离.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/04/2024-3-3-466-%E5%9B%9E%E6%96%87%E6%97%A5%E6%9C%9F-cpp/">2024-3-3-466-回文日期.cpp</a>
           </li>
         
       </ul>

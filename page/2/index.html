@@ -82,6 +82,41 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-3-2-1236-递增三元组-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/03/2024-3-2-1236-%E9%80%92%E5%A2%9E%E4%B8%89%E5%85%83%E7%BB%84-cpp/">2024-3-2-1236-递增三元组.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/03/2024-3-2-1236-%E9%80%92%E5%A2%9E%E4%B8%89%E5%85%83%E7%BB%84-cpp/" class="article-date">
+  <time datetime="2024-03-03T10:25:37.000Z" itemprop="datePublished">2024-03-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-2-1236-递增三元组-cpp"><a href="#2024-3-2-1236-递增三元组-cpp" class="headerlink" title="2024-3-2-1236-递增三元组.cpp"></a>2024-3-2-1236-递增三元组.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PROLOG"><figure class="iseeu highlight /prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int <span class="symbol">N</span> = <span class="number">100010</span>;</span><br><span class="line">int cnt[<span class="symbol">N</span>],as[<span class="symbol">N</span>],cs[<span class="symbol">N</span>];//as[i]表示在a[]中有多少数小于b[i]</span><br><span class="line">int a[<span class="symbol">N</span>],b[<span class="symbol">N</span>],c[<span class="symbol">N</span>],s[<span class="symbol">N</span>],n;//cs[i]表示在c[]中有多少数大于b[i]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;   cin&gt;&gt;n;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;a[i]),a[i]++;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;b[i]),b[i]++;</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) scanf(<span class="string">&quot;%d&quot;</span>, &amp;c[i]),c[i]++;</span><br><span class="line"></span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cnt[a[i]]++;</span><br><span class="line">    for (int i = <span class="number">1</span>; i &lt;<span class="symbol">N</span>; i ++ )s[i]=s[i<span class="number">-1</span>]+cnt[i];</span><br><span class="line">    for (int i = <span class="number">0</span>; i &lt; n; i ++ ) as[i]=s[b[i]<span class="number">-1</span>];</span><br><span class="line"></span><br><span class="line">    //求cs[]</span><br><span class="line">    memset(cnt, <span class="number">0</span>, sizeof cnt);memset(s,<span class="number">0</span>,sizeof s);</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cnt[c[i]]++;</span><br><span class="line">    for(int i=<span class="number">1</span>;i&lt;<span class="symbol">N</span>;i++)s[i]=s[i<span class="number">-1</span>]+cnt[i];</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++)cs[i]=s[<span class="symbol">N</span><span class="number">-1</span>]-s[b[i]];</span><br><span class="line"></span><br><span class="line">    long long res=<span class="number">0</span>;</span><br><span class="line">    for(int i=<span class="number">0</span>;i&lt;n;i++) res+=(long long)as[i]*cs[i];<span class="comment">/*错误实例res+=</span></span><br><span class="line"><span class="comment">    (long long)(as[i]*cs[i]);不需要加括号*/</span></span><br><span class="line">    cout&lt;&lt;res&lt;&lt;endl;</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-2-1214-波动数列-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -397,42 +432,6 @@
 </article>
 
   
-    <article id="post-实现向上取整" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/02/29/%E5%AE%9E%E7%8E%B0%E5%90%91%E4%B8%8A%E5%8F%96%E6%95%B4/">实现向上取整</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/02/29/%E5%AE%9E%E7%8E%B0%E5%90%91%E4%B8%8A%E5%8F%96%E6%95%B4/" class="article-date">
-  <time datetime="2024-02-29T01:39:31.000Z" itemprop="datePublished">2024-02-29</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><p> *** a&#x2F;b,向上取整位（a+b-1）&#x2F;b ***</p>
-
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -472,7 +471,7 @@
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
     </div>
   </div>
 
@@ -482,6 +481,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/03/29/test/">test</a>
+          </li>
         
           <li>
             <a href="/2024/03/21/2024-3-21/">2024-3-21</a>
@@ -497,10 +500,6 @@
         
           <li>
             <a href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/">2024-3-4-1219-移动距离.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/04/2024-3-3-466-%E5%9B%9E%E6%96%87%E6%97%A5%E6%9C%9F-cpp/">2024-3-3-466-回文日期.cpp</a>
           </li>
         
       </ul>
