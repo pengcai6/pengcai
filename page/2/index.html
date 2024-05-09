@@ -82,6 +82,41 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-2024-3-2-4262-空调-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2024/03/03/2024-3-2-4262-%E7%A9%BA%E8%B0%83-cpp/">2024-3-2-4262-空调.cpp</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2024/03/03/2024-3-2-4262-%E7%A9%BA%E8%B0%83-cpp/" class="article-date">
+  <time datetime="2024-03-03T10:26:19.000Z" itemprop="datePublished">2024-03-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h1 id="2024-3-2-4262-空调-cpp"><a href="#2024-3-2-4262-空调-cpp" class="headerlink" title="2024-3-2-4262-空调.cpp"></a>2024-3-2-4262-空调.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAINTEXT"><figure class="iseeu highlight /plaintext"><figcaption><span><iostream></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">const int N = 1e5+10;</span><br><span class="line">int a[N],b[N];</span><br><span class="line">int n;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line">void batch_add(int l,int r,int c)&#123;//创建差分数组</span><br><span class="line">    b[l]+=c,b[r+1]-=c;</span><br><span class="line">    cout&lt;&lt;b[l]&lt;&lt;&quot; &quot;&lt;&lt;b[r+1]&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    for(int i=1;i&lt;=n;i++) cin&gt;&gt;a[i];</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        int t;cin&gt;&gt;t;</span><br><span class="line">        a[i]-=t;</span><br><span class="line">    &#125;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)batch_add(i,i,a[i]);</span><br><span class="line">    int s=0,t=0;</span><br><span class="line">    for(int i=1;i&lt;=n;i++)&#123;</span><br><span class="line">        if(b[i]&gt;0)s+=b[i];</span><br><span class="line">        else if(b[i]&lt;0)t-=b[i];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">cout&lt;&lt;max(s,t);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-2024-3-2-1236-递增三元组-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -397,41 +432,6 @@
 </article>
 
   
-    <article id="post-2024-2-28-1216-饮料换购-cpp" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2024/02/29/2024-2-28-1216-%E9%A5%AE%E6%96%99%E6%8D%A2%E8%B4%AD-cpp/">2024-2-28-1216- 饮料换购.cpp</a>
-    </h1>
-  
-
-    </header>
-  
-  <div class="article-meta">
-    <a href="/2024/02/29/2024-2-28-1216-%E9%A5%AE%E6%96%99%E6%8D%A2%E8%B4%AD-cpp/" class="article-date">
-  <time datetime="2024-02-29T01:44:32.000Z" itemprop="datePublished">2024-02-29</time>
-</a>
-    
-    
-  </div>
-  
-
-  <div class="article-inner">
-    
-    <div class="article-content article-content-cloud" itemprop="articleBody">
-      
-        <h1 id="2024-2-28-1216-饮料换购-cpp"><a href="#2024-2-28-1216-饮料换购-cpp" class="headerlink" title="2024-2-28-1216- 饮料换购.cpp"></a>2024-2-28-1216- 饮料换购.cpp</h1><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CPP"><figure class="iseeu highlight /cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> res;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="type">int</span> res=n;</span><br><span class="line">    <span class="keyword">while</span>(n&gt;=<span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">      res+=n/<span class="number">3</span>;  </span><br><span class="line">    n=n/<span class="number">3</span>+n%<span class="number">3</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;res;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-      
-    </div>
-    
-  </div>
-  
-  
-</article>
-
-  
 
 
   <nav id="page-nav">
@@ -471,7 +471,7 @@
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">五月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">十二月 2023</a></li></ul>
     </div>
   </div>
 
@@ -481,6 +481,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/05/09/%E6%97%B6%E9%97%B4%E5%86%89%E5%86%89/">时间冉冉</a>
+          </li>
         
           <li>
             <a href="/2024/03/29/test/">test</a>
@@ -496,10 +500,6 @@
         
           <li>
             <a href="/2024/03/04/2024-3-4-1229-%E6%97%A5%E6%9C%9F%E9%97%AE%E9%A2%98-cpp/">2024-3-4-1229-日期问题.cpp</a>
-          </li>
-        
-          <li>
-            <a href="/2024/03/04/2024-3-4-1219-%E7%A7%BB%E5%8A%A8%E8%B7%9D%E7%A6%BB-cpp/">2024-3-4-1219-移动距离.cpp</a>
           </li>
         
       </ul>
