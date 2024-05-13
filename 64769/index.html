@@ -58,7 +58,7 @@
         
         >关于</a>
       
-        <a class="nav-item" href="/tags/%20%7C%7C%20fa%20fa-tags" title
+        <a class="nav-item" href="/tags" title
         
         >tags</a>
       
@@ -117,7 +117,7 @@
 
   <div class="article-inner">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
+    <div class="article-content article-content-mac" itemprop="articleBody">
       
         <h3 id="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"><a href="#由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署" class="headerlink" title="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"></a>由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署</h3><p>在博客根目录下创建deploy.sh文件，写入</p>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="VIM"><figure class="iseeu highlight /vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Start&quot;</span></span><br><span class="line">git <span class="built_in">add</span> .</span><br><span class="line">git commit -<span class="keyword">m</span> backup</span><br><span class="line">git push</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Finish&quot;</span></span><br><span class="line"><span class="keyword">echo</span> 按任意键继续</span><br><span class="line"><span class="keyword">read</span> -n <span class="number">1</span></span><br></pre></td></tr></table></figure></div>
@@ -250,6 +250,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/3792a2b7/">Java中reflect的学习</a>
+          </li>
+        
+          <li>
             <a href="/10739/">博文测试</a>
           </li>
         
@@ -263,10 +267,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/15806/">2024-3-21</a>
-          </li>
-        
-          <li>
-            <a href="/55575/">Git使用方法</a>
           </li>
         
       </ul>
@@ -334,7 +334,7 @@ document.body.write(script);
   
     <a href="/about" class="mobile-nav-link">关于</a>
   
-    <a href="/tags/%20%7C%7C%20fa%20fa-tags" class="mobile-nav-link">tags</a>
+    <a href="/tags" class="mobile-nav-link">tags</a>
   
     <a href="/categories" class="mobile-nav-link">分类</a>
   
@@ -351,6 +351,7 @@ document.body.write(script);
   <div class="mobile-nav-img  mobile-nav-bottom"></div>
 </nav>    
   </div>
-
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
