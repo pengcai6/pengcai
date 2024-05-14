@@ -90,6 +90,93 @@
       <div id="middlecontent" title class="global-width sidebar-right">
         <section id="main">
   
+    <article id="post-Hexo备份事项" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/64769/">Hexo备份事项</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/64769/" class="article-date">
+  <time datetime="2023-12-03T13:40:10.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <h3 id="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"><a href="#由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署" class="headerlink" title="由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署"></a>由于每次更新后都要输入大量命令行十分麻烦，遂创建一键部署脚本方便备份部署</h3><p>在博客根目录下创建deploy.sh文件，写入</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="VIM"><figure class="iseeu highlight /vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Start&quot;</span></span><br><span class="line">git <span class="built_in">add</span> .</span><br><span class="line">git commit -<span class="keyword">m</span> backup</span><br><span class="line">git push</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;Finish&quot;</span></span><br><span class="line"><span class="keyword">echo</span> 按任意键继续</span><br><span class="line"><span class="keyword">read</span> -n <span class="number">1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>保存后，在博客根目录双击执行或用命令.&#x2F;deploy.sh 即可实现博客的一键备份并部署</p>
+<h3 id="恢复博客"><a href="#恢复博客" class="headerlink" title="恢复博客"></a>恢复博客</h3><p>基础环境搭建<br>Hexo博客基础环境已经搭好：比如安装npm、git、nodejs、hexo安装…</p>
+<p>克隆项目到本地<br>Ctrl+Alt+T打开终端，输入</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CRMSH"><figure class="iseeu highlight /crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>@gitee.com:stringwind/blog_backup.git</span><br></pre></td></tr></table></figure></div>
+
+
+<p>git clone 自己的仓库地址</p>
+<p>恢复博客<br>在clone来的文件夹里执行</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMAKE"><figure class="iseeu highlight /cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-cli</span><br><span class="line">npm <span class="keyword">install</span></span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-git</span><br></pre></td></tr></table></figure></div>
+<p>&#x3D;&#x3D;注意由于主题未备份，需要进入站源文件修改主题为默认主题才可恢复&#x3D;&#x3D;<br>这样博客源文件就成功移植了，再用hexo clean、hexo g、hexo d即可部署完成</p>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
+    <article id="post-生活！" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/43509/">12/3随笔</a>
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/43509/" class="article-date">
+  <time datetime="2023-12-03T09:55:43.000Z" itemprop="datePublished">2023-12-03</time>
+</a>
+    
+    
+  </div>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <ul>
+<li><em><strong>1.过去的我已经死亡，而今的我正在奔赴死亡</strong></em></li>
+<li>2.起心动念，每一刻都站在死亡之间循环重生<br>-<img src="https://cai6.xyz/file/6abbfd02eb52f284aa1e4.jpg"></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+  
+</article>
+
+  
     <article id="post-My-lover" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
@@ -246,7 +333,15 @@
       <ul>
         
           <li>
+            <a href="/18d999bf/">2024-5-14小计</a>
+          </li>
+        
+          <li>
             <a href="/3792a2b7/">Java中reflect的学习</a>
+          </li>
+        
+          <li>
+            <a href="/effe97e6/">端口与套接字</a>
           </li>
         
           <li>
@@ -255,14 +350,6 @@
         
           <li>
             <a href="/7058/">时间冉冉</a>
-          </li>
-        
-          <li>
-            <a href="/63537/">test</a>
-          </li>
-        
-          <li>
-            <a href="/15806/">2024-3-21</a>
           </li>
         
       </ul>
