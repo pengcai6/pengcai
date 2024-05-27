@@ -6,7 +6,7 @@
   <link href="https://www.cai094.top/atom.xml" rel="self"/>
   
   <link href="https://www.cai094.top/"/>
-  <updated>2024-05-25T00:53:17.000Z</updated>
+  <updated>2024-05-27T12:04:43.000Z</updated>
   <id>https://www.cai094.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站新增</title>
+    <link href="https://www.cai094.top/8908ce9a/"/>
+    <id>https://www.cai094.top/8908ce9a/</id>
+    <published>2024-05-27T12:04:43.000Z</published>
+    <updated>2024-05-27T12:04:43.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;新建主题中的评论机制&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>动画版小谢</title>
@@ -121,7 +143,8 @@ public class ClassSample &amp;#123;
         
         
     <summary type="html">&lt;hr&gt;
-&lt;h2 id=&quot;title-端口与套接字date-2024-05-12-15-57-36updated-2024-05-12-15-57-36&quot;&gt;&lt;a</summary>
+&lt;p&gt;title: 端口与套接字&lt;br&gt;date: 2024-05-12 15:57:36&lt;/p&gt;
+&lt;h2 id=&quot;updated-2024-05-12-15-57-36&quot;&gt;&lt;a href=&quot;#updated-2024-05-12-15-57-36&quot;</summary>
         
       
     
@@ -142,7 +165,7 @@ public class ClassSample &amp;#123;
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;/../img/1691894007699.jpeg&quot; alt=&quot;alt</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;../img/1691894007699.jpeg&quot; alt=&quot;alt</summary>
         
       
     
@@ -177,7 +200,7 @@ public class ClassSample &amp;#123;
         
         
     <summary type="html">&lt;details&gt;
-  &lt;summary&gt; 折叠代码示例 &lt;/summary&gt;
+  &lt;summary&gt; 折叠代码示例 &lt;/summary&gt;
   &lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;</summary>
         
       
@@ -221,10 +244,8 @@ public class ClassSample &amp;#123;
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;1 工作流&lt;/strong&gt;&lt;br&gt;首先你可以提出更改（把它们添加到暂存区），使用如下命令：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;git add &amp;lt;filename&amp;gt;  //表示添加文件到缓存区
-git add *或git</summary>
+&lt;li&gt;&lt;strong&gt;1 工作流&lt;/strong&gt;&lt;br&gt;首先你可以提出更改（把它们添加到暂存区），使用如下命令：  &lt;pre&gt;&lt;code&gt;git add &amp;lt;filename&amp;gt;  //表示添加文件到缓存区
+git add *或git add .</summary>
         
       
     
@@ -432,29 +453,6 @@ git add *或git</summary>
         
         
     <summary type="html">&lt;h1 id=&quot;2024-3-2-1214-波动数列-cpp&quot;&gt;&lt;a href=&quot;#2024-3-2-1214-波动数列-cpp&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-    <category term="算法" scheme="https://www.cai094.top/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-3-2-1210-连号区间数.cpp</title>
-    <link href="https://www.cai094.top/60735/"/>
-    <id>https://www.cai094.top/60735/</id>
-    <published>2024-03-03T10:24:33.000Z</published>
-    <updated>2024-05-12T01:46:00.896Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;2024-3-2-1210-连号区间数-cpp&quot;&gt;&lt;a href=&quot;#2024-3-2-1210-连号区间数-cpp&quot; class=&quot;headerlink&quot;</summary>
         
       
     
